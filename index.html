@@ -8,16 +8,31 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
       $(document).ready(function () {
-        var x = 35;
+        var x_pls_1 = $(
+          "div.up_1 div.div_1 span:nth-child(2) ul a:nth-child(1)"
+        ).outerHeight();
+        var x_pls_2 = $(
+          "div.up_1 div.div_1 span:nth-child(2) ul a:nth-child(2)"
+        ).outerHeight();
+        var x_pls_3 = $(
+          "div.up_1 div.div_1 span:nth-child(2) ul a:nth-child(3)"
+        ).outerHeight();
+        var x_pls = $(
+          "div.up_1 div.div_1 span:nth-child(2) ul a:nth-child(4) "
+        ).outerHeight();
+        var all_pl = x_pls_1 + x_pls_2 + x_pls_3 + x_pls;
+        var od_pl_1 = 15;
+        var x = x_pls + od_pl_1;
+        var cn_pl = (x_pls + od_pl_1) * 4 - 1;
         var a = function () {
-          if (x > 120) {
+          if (x > cn_pl) {
             x = 0;
           }
           $("div.up_1 div.div_1 span:nth-child(2) ul").animate({
             scrollTop: x + "px",
           });
-          x += 35;
-          console.log(x);
+          x += x_pls + od_pl_1;
+          console.log(x, cn_pl);
         };
         var c = setInterval(a, 3000);
         $("div.up_1 div.div_1 span:nth-child(2) ul").mouseleave(function () {
@@ -52,10 +67,10 @@
                   <li>Kids and Music</li>
                 </a>
                 <a href="">
-                  <li>Kids and Music</li>
+                  <li>Kids and Playtime</li>
                 </a>
                 <a href="">
-                  <li>Kids and Playtime</li>
+                  <li>Storytime for Kids</li>
                 </a>
               </ul>
             </span>

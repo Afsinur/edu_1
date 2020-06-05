@@ -20,6 +20,7 @@ section.section_1 ul {
 div.st_up {
     width: 80%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     align-content: center;
@@ -70,6 +71,10 @@ div.up_1 div.div_1 span:nth-child(2) ul::-webkit-scrollbar-thumb {
 
 div.up_1 div.div_1 span:nth-child(2) ul a {
     margin-bottom: 15px;
+}
+
+div.div_3 {
+    width: 15%;
 }
 
 div.up_1 div.div_2 ul a,
