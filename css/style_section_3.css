@@ -1,0 +1,15 @@
+section.section_3 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+section.section_3 div {
+    width: 100%;
+}
+
+section.section_3 div img {
+    width: 100%;
+}
